@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/odin-lined.png">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="image/salween-hameed-JmASreocA0g-unsplash.jpg" alt="">
+            <p class="credits">
+                Photo by <a
+                    href='https://unsplash.com/@salween?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
+                    target="_blank" style="color:salmon;">Salween Hameed</a> on <a
+                    href='https://unsplash.com/photos/the-night-sky-is-filled-with-stars-and-trees-JmASreocA0g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
+                    target="_blank" style="color: salmon;">Unsplash</a>
+            </p>
+            <div class="logo">
+                <img src="image/odin-lined.png" alt="odin-logo">
+                <h1>ODIN</h1>
+            </div>
+        </div>
+        <div class="right">
+            <h2>This is not a real online service! You know you need something like this in your life to help you
+                realize your deepest dreams.
+                <pre style="font-family: 'Times New Roman', Times, serif;">Sign up <em>now</em> to get started.</pre>
+            </h2>
+            <p>You <em>know</em> you want to.</p>
+            <p>Let's do this!</p>
+            <h5>( The fields marked with * are mandatory )</h5>
+            <form action="/sign-up" method="post">
+                <fieldset id="rows">
+                    <div>
+                        <label for="first_name">FIRST NAME *</label>
+                        <input type="text" name="first_name" id="first_name" required placeholder="John">
+                    </div>
+
+                    <div>
+                        <label for="last_name">LAST NAME *</label>
+                        <input type="text" name="last_name" id="last_name" required placeholder="Cena">
+                    </div>
+                </fieldset>
+                <fieldset id="rows">
+                    <div>
+                        <label for="email">EMAIL *</label>
+                        <input type="email" name="email" id="email" required placeholder="you@gmail.com">
+                    </div>
+
+                    <div>
+                        <label for="number">PHONE NUMBER *</label>
+                        <input name="number" id="number" required  pattern="[0-9]+"  minlength="10" maxlength="10">
+                    </div>
+                </fieldset>
+
+                <fieldset id="rows">
+                    <div>
+                        <label for="password">PASSWORD *</label>
+                        <input type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Must be atleast 8 characters long with one uppercase letter, atleast one number and a special character.">
+                    </div> 
+
+                    <div>
+                        <label for="password-confirm">CONFIRM PASSWORD *</label>
+                        <input type="password" name="password-confirm" id="password-confirm" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  title="Confirm your password">
+                    </div>
+                </fieldset>
+                <fieldset id="button">
+                    <button id="btn">
+                        Create Account
+                    </button>
+                    <h4>Already have an account ?  <a href="/login" style="color: rgb(8, 65, 31);">Log in</a></h4>
+                </fieldset>
+            </form>
+            
+        </div>
+    </div>
+</body>
+
+</html>
